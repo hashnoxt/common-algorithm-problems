@@ -1,19 +1,13 @@
-string_to_decode = input('Enter camel case string to seperate: ')
+def camelcase(s):
+    # Write your code here
 
-have_more_items : int = 1
+    camel_case_words : int = 0
 
-all_words : list = []
-
-while have_more_items:
-
-    index_list : list = [0]
-
-    for letter_index in range(len(string_to_decode)):
-        if string_to_decode[letter_index].isupper():
-            index_list.append(letter_index)
+    for letter_index in range(len(s)):
+        if s[letter_index].isupper():
+            camel_case_words += 1
     
-    for item_index in range(len(index_list) -1):
-        print(string_to_decode[index_list[item_index] : index_list[item_index + 1]])
-
-    have_more_items = 0
-
+    camel_case_words += 1
+            
+    return camel_case_words
+        
